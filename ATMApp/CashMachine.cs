@@ -124,7 +124,7 @@ namespace ATMApp
             return msg;
         }
 
-        public static void main(String[] args)
+        public static void Main(string[] args)
         {
             CashMachine egg = new CashMachine();
             bool on = true;
