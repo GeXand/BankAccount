@@ -58,7 +58,7 @@ namespace ATMApp
 
                 if (hun > hund || fif > fidd || twe > twen || ten > tens || fiv > fivs || one > ones)
                 {
-                    msg = "Failure: Insufficient Funds";
+                    msg = "Failure: Insufficient Funds" + "\n";
                 }
                 else
                 {
@@ -139,15 +139,15 @@ namespace ATMApp
                 String command = Console.ReadLine();
                 if (command[0] == 'W')
                 {
-                    Console.Write(egg.withdraw(Int32.Parse(command.Substring(3, command.Length))));
+                    Console.WriteLine(egg.withdraw(Int32.Parse(command.Substring(3, command.Length - 3))));
                 }
                 else if (command[0] == 'I')
                 {
-                    Console.Write(egg.check(command.Substring(2, command.Length)));
+                    Console.WriteLine(egg.check(command.Substring(2, command.Length - 2)));
                 }
                 else if (command[0] == 'R')
                 {
-                    Console.Write(egg.restock());
+                    Console.WriteLine(egg.restock());
                 }
                 else if (command[0] == 'Q')
                 {
@@ -155,9 +155,9 @@ namespace ATMApp
                 }
                 else
                 {
-                    Console.WriteLine("Failure: Invalid Command");
+                    Console.WriteLine("Failure: Invalid Command" + "\n");
                 }
-                Console.WriteLine("Please enter another command or quit the application.");
+                Console.WriteLine("Please enter another command or quit the application:");
             }
         }
 
