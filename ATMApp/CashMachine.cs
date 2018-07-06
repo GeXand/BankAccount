@@ -128,6 +128,11 @@ namespace ATMApp
         {
             CashMachine egg = new CashMachine();
             bool on = true;
+            Console.WriteLine("Welcome to the Cash Machine! Enter a command to begin:");
+            Console.WriteLine("R - Restocks the cash machine");
+            Console.WriteLine("W <dollar amount> - Withdraws amount from the cash machine");
+            Console.WriteLine("I <denominations> - Displays the number of bills in that denomination present in the cash machine");
+            Console.WriteLine("Q - Quit the application");
 
             while (on)
             {
@@ -152,6 +157,7 @@ namespace ATMApp
                 {
                     Console.WriteLine("Failure: Invalid Command");
                 }
+                Console.WriteLine("Please enter another command or quit the application.");
             }
         }
 
